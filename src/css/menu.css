@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--color2-light-green);
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li {
+    width: max-content;
+    height: max-content;
+    padding: 4px 12px;
+    border: 3px solid transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu li::after {
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 0;
+    border-bottom: 3px solid #00343c;
+    transition: width 0.5s ease;
+}
+
+.menu li:hover::after {
+    width: 100%;
+}
+
+.link-menu {
+    color: var(--white-default);
+    font-size: 1.5rem;
+    font-weight: 500;
+}

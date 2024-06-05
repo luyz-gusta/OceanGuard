@@ -1,0 +1,39 @@
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--color1-dark-green);
+    min-height: 80vh;
+}
+
+.content-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding-left: 120px;
+}
+
+.content-txt p {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--white-default);
+}
+
+.content-txt img {
+    width: 50%;
+}
+
+.content-txt strong {
+    color: var(--color3-cyan);
+}
+
+.content-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-img img {
+    height: auto;
+    width: 60%;
+}
