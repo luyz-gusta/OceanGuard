@@ -7,6 +7,20 @@ const usuario = {
     senha: 'Costa1234@'
 }
 
+document.getElementById('icon-password').addEventListener('click', () => {
+    const icon = document.getElementById('icon-password')
+    const inputSenha = document.getElementById('senha')
+
+    if (icon.classList.contains('fa-eye-slash')) {
+        icon.classList.remove('fa-eye-slash')
+        icon.classList.add('fa-eye')
+        inputSenha.type = 'password'
+    } else {
+        icon.classList.remove('fa-eye')
+        icon.classList.add('fa-eye-slash')
+        inputSenha.type = 'text'
+    }
+})
 
 const validar = (event) => {
     event.preventDefault()
