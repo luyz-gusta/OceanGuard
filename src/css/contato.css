@@ -1,0 +1,128 @@
+main {
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+    background-color: var(--color1-dark-green);
+}
+
+.bg-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.bg-contato img {
+    height: 100%;
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: var(--white-default);
+    padding: 1.5rem 3rem;
+}
+
+form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 1rem;
+    width: 180px;
+    height: 60px;
+    border: initial;
+    border-radius: 10px;
+    color: var(--white-default);
+    background-color: var(--color2-light-green);
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.titulo h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color1-dark-green);
+}
+
+.titulo img {
+    width: auto;
+    height: 100px;
+}
+
+.texto-contato {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/***** Select *****/
+.select-single {
+    margin: 18px 0;
+}
+
+.select-single select {
+    width: 100%;
+    border: 0px;
+    border-bottom: 2px solid #ccc;
+    font-size: 15px;
+}
+
+/***** Input *****/
+
+.input-single {
+    height: max-content;
+    position: relative;
+    margin: 18px 0;
+}
+
+.input-single label {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.2s;
+    z-index: 0;
+}
+
+.input {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid #ccc;
+}
+
+form .input-single .input:focus ~ label,
+form .input-single .input:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color1-dark-green);
+}
