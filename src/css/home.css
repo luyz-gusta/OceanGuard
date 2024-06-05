@@ -14,9 +14,23 @@ main {
 }
 
 .content-txt p {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: 400;
     color: var(--white-default);
+}
+
+.content-txt a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 1rem;
+    width: 180px;
+    height: 60px;
+    border-radius: 4px;
+    background: linear-gradient(73deg, #00fefb -0.65%, #428e8d 99.23%);
 }
 
 .content-txt img {

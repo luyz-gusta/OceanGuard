@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Links CSS -->
-    <link rel="stylesheet" href="src/css/comum.css">
-    <link rel="stylesheet" href="src/css/home.css">
-    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="../css/comum.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/menu.css">
 
     <!-- Imports -->
     <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
@@ -18,34 +18,41 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <title>Ocean Guard - Home</title>
+    <title>Ocean Guard - Login</title>
 </head>
 
 <body>
     <header>
-        <img src="src/assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
+        <img src="../assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
         <nav>
             <ul class="menu">
-                <li><a href="#" class="link-menu">Home</a></li>
-                <li><a href="src/pages/login.html" class="link-menu">Login</a></li>
+                <li><a href="../../index.html" class="link-menu">Home</a></li>
+                <li><a href="#" class="link-menu">Login</a></li>
                 <li><a href="#" class="link-menu">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="content-txt">
-            <img src="src/assets/ocean-guard.png" alt="Logo da solução criada pela globalcode">
-            <p>
-                A <strong>OceanGuard</strong>, desenvolvida pela <strong>GlobalCode Dynamics</strong>, utiliza
-                tecnologia de ponta para enfrentar os desafios críticos que os oceanos enfrentam hoje. Nossa solução
-                inovadora visa monitorar e mitigar os impactos ambientais, promovendo uma gestão mais sustentável dos
-                recursos oceânicos.
-            </p>
-            <a href="src/pages/login.html">Acessar</a>
-        </div>
-        <div class="content-img">
-            <img src="src/assets/tecnologias.png" alt="Tecnologias usada no projeto">
-        </div>
+        <img src="../assets/bg-login-1.jpg" alt="background de uma imagem ilustrativa para a pagina de login"
+            class="bg-login" id="imageBanner">
+        <form>
+            <div class="titulo">
+                <img src="../assets/logo-global-code-small.png" alt="Logo globalcode pequena" class="logo-titulo">
+                <h1>Login</h1>
+            </div>
+            <div class="box-input">
+                <div class="group">
+                    <span class='icon'><i class="fa-solid fa-user"></i></span>
+                    <input class="input" id="email" type='text' placeholder='Email' autocomplete="off" required />
+                </div>
+                <div class="group">
+                    <span class='icon'><i class="fa-solid fa-lock"></i></span>
+                    <input class="input" id="senha" type='password' placeholder="Senha" autocomplete="off" required />
+                    <span class='icon-password'><i class="fa-regular fa-eye"></i></span>
+                </div>
+            </div>
+            <button onclick="validar(event)">Entrar</button>
+        </form>
     </main>
     <footer>
         <div class="contt-email">
@@ -72,6 +79,9 @@
             <a href="#" class="icon-media"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
+
+    <!-- Scripts JS -->
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
