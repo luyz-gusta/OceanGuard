@@ -35,6 +35,7 @@ main {
 
 .content-txt img {
     width: 50%;
+    animation: jumping 1s infinite alternate;
 }
 
 .content-txt strong {
@@ -50,6 +51,7 @@ main {
 .content-img img {
     height: auto;
     width: 60%;
+    animation: start 1s ease-in-out forwards;
 }
 
 @media (max-width: 920px) {
@@ -100,5 +102,25 @@ main {
 @media (max-width: 540px) {
     .content-txt img {
         width: 100%;
+    }
+}
+
+@keyframes jumping {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes start {
+    from {
+        transform: translateX(-100vw) rotate(-360deg); /* Começa fora da tela à esquerda, girando */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotate(0deg); /* Termina na posição original, sem girar */
+        opacity: 1;
     }
 }

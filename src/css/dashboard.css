@@ -3,7 +3,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     padding: 60px 120px;
-    min-height: 80vh;
+    height: 80vh;
     width: 100vw;
     background-color: var(--color1-dark-green);
 }
@@ -61,6 +61,7 @@ main {
     min-width: 450px;
     height: 30vh;
     border-radius: 14px;
+    animation: flyIn 2s ease-in-out forwards;
     background-color: var(--color2-light-green);
 }
 
@@ -71,6 +72,10 @@ main {
 }
 
 @media (max-width: 1440px) {
+    main {
+        min-height: 80vh;
+        height: auto;
+    }
     .container-info {
         display: flex;
         justify-content: center;
@@ -140,5 +145,16 @@ main {
     .nome-valor img {
         width: 20%;
         height: auto;
+    }
+}
+
+@keyframes flyIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

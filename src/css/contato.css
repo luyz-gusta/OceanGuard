@@ -68,6 +68,7 @@ form button {
 .titulo img {
     width: auto;
     height: 100px;
+    animation: start 2s ease-in-out forwards;
 }
 
 .texto-contato {
@@ -215,5 +216,16 @@ form .input-single .input:valid ~ label {
 
     main {
         padding: 1rem 0px;
+    }
+}
+
+@keyframes start {
+    from {
+        transform: translateX(-30vw) rotate(-360deg); /* Começa fora da tela à esquerda, girando */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotate(0deg); /* Termina na posição original, sem girar */
+        opacity: 1;
     }
 }

@@ -35,6 +35,10 @@ form {
     color: var(--white-default);
 }
 
+.titulo img {
+    animation: start 2s ease-in-out forwards;
+}
+
 .box-input {
     display: flex;
     flex-direction: column;
@@ -191,5 +195,16 @@ form button {
 
     .titulo h1 {
         font-size: 4rem;
+    }
+}
+
+@keyframes start {
+    from {
+        transform: translateX(50vw) rotate(-360deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
     }
 }
