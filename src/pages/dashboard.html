@@ -8,8 +8,8 @@
 
     <!-- Links CSS -->
     <link rel="stylesheet" href="../css/comum.css">
-    <link rel="stylesheet" href="../css/contato.css">
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/menu-dashboard.css">
 
     <!-- Imports -->
     <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
@@ -19,60 +19,47 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <title>Ocean Guard - Contato</title>
+    <title>Ocean Guard - Dashboard</title>
 </head>
 
 <body>
     <header>
         <img src="../assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
-        <nav>
-            <ul class="menu">
-                <li><a href="../../index.html" class="link-menu">Home</a></li>
-                <li><a href="./login.html" class="link-menu">Login</a></li>
-                <li><a href="#" class="link-menu">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="sair" id="sair">
+            <span>Sair</span>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </div>
     </header>
     <main>
-        <section class="contato">
-            <form>
-                <div class="titulo">
-                    <img src="../assets/logo-global-code-small-2.png" alt="Logo globalcode pequena" class="logo-titulo">
-                    <h1>Contato</h1>
+        <div class="titulo">
+            <h1>Dashboard</h1>
+            <select name="tipo-user" id="tipoUser" required>
+                <option disabled selected value="0">Selecione o mar</option>
+            </select>
+        </div>
+        <div class="container-info">
+            <div class="info">
+                <div class="nome-valor">
+                    <h2>pH</h2>
+                    <img src="../assets/icon-ph.png" alt="Icone simbólico do pH da agua">
                 </div>
-                <p class="texto-contato">Caso você queira ter acesso ao ocean guard mande a baixo a solicitação, coloque
-                    seus dados e o qual o tipo de
-                    usuário você deseja. Após a validação dos dado você receberá no email sua forma de aceso.</p>
-                <div class="box-input">
-                    <div class="input-single">
-                        <input type="text" id="nome" class="input" autocomplete="off" required>
-                        <label for="nome-box" class="label">Seu nome</label>
-                    </div>
-                    <div class="input-single">
-                        <input type="text" id="email" class="input" autocomplete="off" required>
-                        <label for="email-box" class="label">Seu e-mail</label>
-                    </div>
-                    <div class="input-single">
-                        <input type="text" id="telefone" class="input" autocomplete="off" required
-                            oninput="phoneMask(this)" maxlength="14">
-                        <label for="phone-box" class="label">Seu telefone</label>
-                    </div>
-                    <div class="select-single">
-                        <select name="tipo-user" id="tipo-user" required>
-                            <option disabled selected value="0">Selecione o seu tipo de usuario</option>
-                            <option value="CC">Comunidade Costeira</option>
-                            <option value="EM">Empresa Marítimas</option>
-                            <option value="GO">Governo/ONGs</option>
-                            <option value="PC">Pessoa Comum</option>
-                        </select>
-                    </div>
+                <p id="pH">0</p>
+            </div>
+            <div class="info">
+                <div class="nome-valor">
+                    <h2>Turbidez</h2>
+                    <img src="../assets/icon-turbidez.png" alt="Icone simbólico da turbidez da agua">
                 </div>
-                <button id="btn-enviar" onclick="enviar(event)">Enviar</button>
-            </form>
-        </section>
-        <section class="bg-contato">
-            <img src="../assets/contact.svg" alt="Imagem ilustrativa para a pagina de contato">
-        </section>
+                <p id="turbidez">0</p>
+            </div>
+            <div class="info">
+                <div class="nome-valor">
+                    <h2>Temperatura</h2>
+                    <img src="../assets/icon-temperatura.png" alt="Icone simbólico da temperatura da agua">
+                </div>
+                <p id="temperatura">0°C</p>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="contt-email">
@@ -100,7 +87,9 @@
         </div>
     </footer>
 
-    <script src="../js/contato.js"></script>
+    <!-- Scripts JS -->
+    <script src="../js/dashboard.js"></script>
+
 </body>
 
 </html>

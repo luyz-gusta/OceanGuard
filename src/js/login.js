@@ -3,7 +3,7 @@ var indexSlide = 0
 var time = 3000
 
 const usuario = {
-    email: 'costamaritima@gmail.com',
+    email: 'maritimo@gmail.com',
     senha: 'Costa1234@'
 }
 
@@ -34,7 +34,7 @@ const validar = (event) => {
         alert('Senha vázia, confira a senha!!')
     } else {
         if (usuario.email == email && usuario.senha == senha) {
-            // window.open("./quiz.html")
+            window.location.href = './dashboard.html';
         } else {
             alert('Usuário ou senha inválidos')
         }
