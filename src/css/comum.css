@@ -81,3 +81,85 @@ footer {
     background-color: var(--color1-dark-green);
     color: var(--white-default);
 }
+
+@media (max-width: 1080px) {
+    .contt-email p {
+        font-size: 1rem;
+    }
+
+    .contt-email svg {
+        width: 20px;
+        height: auto;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+
+    .icon-media {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 920px) {
+    footer {
+        padding: 0px 60px;
+    }
+}
+
+@media (max-width: 840px) {
+    .contt-email p {
+        font-size: 0.75rem;
+    }
+
+    .contt-email svg {
+        width: 1rem;
+        height: auto;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+    }
+
+    .icon-media {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .social-media {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 10vh;
+        height: auto;
+        padding: 1rem 0px;
+        gap: 1.5rem;
+    }
+
+    .contt-email p {
+        font-size: 1rem;
+    }
+
+    .contt-email svg {
+        width: 20px;
+        height: auto;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+
+    .icon-media {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.1rem;
+    }
+}

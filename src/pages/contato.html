@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/logo-global-code-small.png" type="image/x-icon">
 
     <!-- Links CSS -->
     <link rel="stylesheet" href="../css/comum.css">
@@ -23,12 +24,17 @@
 
 <body>
     <header>
-        <img src="../assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
+        <img src="src/assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
         <nav>
-            <ul class="menu">
-                <li><a href="../../index.html" class="link-menu">Home</a></li>
-                <li><a href="./login.html" class="link-menu">Login</a></li>
-                <li><a href="#" class="link-menu">Contato</a></li>
+            <div class="menuToggle" id="menuToggle">
+                <span class="menu-span unclicked"></span>
+                <span class="menu-span unclicked"></span>
+                <span class="menu-span unclicked"></span>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#" class="link-menu">Home</a></li>
+                <li><a href="src/pages/login.html" class="link-menu">Login</a></li>
+                <li><a href="src/pages/contato.html" class="link-menu">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -99,7 +105,9 @@
         </div>
     </footer>
 
+    <!-- Scripts JS -->
     <script src="../js/contato.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>
