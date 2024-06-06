@@ -25,3 +25,29 @@ header {
     font-weight: 500;
     color: #fff;
 }
+
+@media (max-width: 1080px) {
+    header img {
+        height: 60%;
+        width: auto;
+    }
+}
+
+@media (max-width: 960px) {
+    header {
+        padding: 0px 60px;
+    }
+}
+
+@media (max-width: 540px) {
+    header img {
+        height: 60%;
+        width: auto;
+    }
+}
+
+@media (max-width: 440px) {
+    header {
+        padding: 0px 24px;
+    }
+}

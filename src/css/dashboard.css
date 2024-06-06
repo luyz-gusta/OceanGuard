@@ -3,7 +3,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     padding: 60px 120px;
-    height: 80vh;
+    min-height: 80vh;
     width: 100vw;
     background-color: var(--color1-dark-green);
 }
@@ -33,6 +33,8 @@ main {
 .container-info {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    justify-items: center;
     padding: 20px 0px;
 }
 
@@ -48,9 +50,15 @@ main {
     color: var(--white-default);
 }
 
+.nome-valor img {
+    width: 20%;
+    height: auto;
+}
+
 .info {
     padding: 20px 24px 40px 40px;
     width: 30%;
+    min-width: 450px;
     height: 30vh;
     border-radius: 14px;
     background-color: var(--color2-light-green);
@@ -60,4 +68,77 @@ main {
     font-size: 6rem;
     font-weight: 500;
     color: #fff;
+}
+
+@media (max-width: 1440px) {
+    .container-info {
+        display: flex;
+        justify-content: center;
+        gap: 2rem 10%;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .titulo select {
+        min-width: 250px;
+    }
+
+    main {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 860px) {
+    .info {
+        padding: 24px;
+        min-width: 350px;
+        height: auto;
+    }
+
+    .info p {
+        font-size: 4rem;
+    }
+
+    .nome-valor h2 {
+        font-size: 2rem;
+    }
+
+    .nome-valor img {
+        width: 20%;
+        height: auto;
+    }
+}
+
+@media (max-width: 680px) {
+    .titulo {
+        align-items: center;
+    }
+    .titulo h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 440px) {
+    main {
+        padding: 60px 16px;
+    }
+    .info {
+        padding: 16px;
+        width: 90%;
+        height: auto;
+    }
+
+    .info p {
+        font-size: 2.5rem;
+    }
+
+    .nome-valor h2 {
+        font-size: 1.5rem;
+    }
+
+    .nome-valor img {
+        width: 20%;
+        height: auto;
+    }
 }
