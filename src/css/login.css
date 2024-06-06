@@ -110,3 +110,86 @@ form button {
     color: var(--white-default);
     background: var(--color2-light-green);
 }
+
+@media (max-width: 1280px) {
+    .titulo {
+        display: flex;
+        align-items: center;
+        height: 120px;
+        gap: 1rem;
+    }
+
+    .titulo h1 {
+        font-size: 5rem;
+    }
+
+    .titulo img {
+        width: auto;
+        height: 100%;
+    }
+
+    .box-input {
+        width: 100%;
+    }
+
+    .group {
+        width: 100%;
+        padding: 0px 10%;
+    }
+
+    .icon {
+        left: 12%;
+    }
+
+    .icon-password {
+        right: 12%;
+    }
+}
+
+@media (max-width: 960px) {
+    .titulo {
+        height: 100px;
+    }
+
+    .titulo h1 {
+        font-size: 4.55rem;
+    }
+
+    form button {
+        height: 60px;
+        width: 15vw;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 860px) {
+    .bg-login {
+        display: none;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .box-input {
+        width: 80%;
+        gap: 1.5rem;
+    }
+
+    form button {
+        height: 50px;
+        width: 20vw;
+        min-width: 160px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .titulo {
+        height: 90px;
+    }
+
+    .titulo h1 {
+        font-size: 4rem;
+    }
+}
