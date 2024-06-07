@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/***** Reset + Configs *****/
+
+:root {
+    --color1-dark-green: #00343c;
+    --color2-light-green: #428e8d;
+    --color3-cyan: #00fefb;
+    --white-default: #fff;
+}
+
+ul,
+li,
+a,
+ol {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/***** Foooter *****/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--color2-light-green);
+}
+
+.contt-email {
+    display: flex;
+    gap: 8px;
+}
+
+.contt-email p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--white-default);
+}
+
+.copyright {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--white-default);
+}
+
+.social-media {
+    display: flex;
+    gap: 2rem;
+}
+
+.icon-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: 0.5s ease;
+    background-color: var(--white-default);
+    color: var(--color2-light-green);
+}
+
+.icon-media:hover {
+    background-color: var(--color1-dark-green);
+    color: var(--white-default);
+}
+
+@media (max-width: 1080px) {
+    .contt-email p {
+        font-size: 1rem;
+    }
+
+    .contt-email svg {
+        width: 20px;
+        height: auto;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+
+    .icon-media {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 920px) {
+    footer {
+        padding: 0px 60px;
+    }
+}
+
+@media (max-width: 840px) {
+    .contt-email p {
+        font-size: 0.75rem;
+    }
+
+    .contt-email svg {
+        width: 1rem;
+        height: auto;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+    }
+
+    .icon-media {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .social-media {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 10vh;
+        height: auto;
+        padding: 1rem 0px;
+        gap: 1.5rem;
+    }
+
+    .contt-email p {
+        font-size: 1rem;
+    }
+
+    .contt-email svg {
+        width: 20px;
+        height: auto;
+    }
+
+    .copyright {
+        font-size: 1rem;
+    }
+
+    .icon-media {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.1rem;
+    }
+}

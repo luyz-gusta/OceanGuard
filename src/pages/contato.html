@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/assets/logo-global-code-small.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/logo-global-code-small.png" type="image/x-icon">
 
     <!-- Links CSS -->
-    <link rel="stylesheet" href="src/css/comum.css">
-    <link rel="stylesheet" href="src/css/home.css">
-    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="../css/comum.css">
+    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../css/menu.css">
 
     <!-- Imports -->
     <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
@@ -19,12 +19,12 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <title>Ocean Guard - Home</title>
+    <title>Ocean Guard - Contato</title>
 </head>
 
 <body>
     <header>
-        <img src="src/assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
+        <img src="../assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
         <nav>
             <div class="menuToggle" id="menuToggle">
                 <span class="menu-span unclicked"></span>
@@ -32,26 +32,52 @@
                 <span class="menu-span unclicked"></span>
             </div>
             <ul class="menu" id="menu">
-                <li><a href="#" class="link-menu">Home</a></li>
-                <li><a href="src/pages/login.html" class="link-menu">Login</a></li>
-                <li><a href="src/pages/contato.html" class="link-menu">Contato</a></li>
+                <li><a href="../../index.html" class="link-menu">Home</a></li>
+                <li><a href="../pages/login.html" class="link-menu">Login</a></li>
+                <li><a href="#" class="link-menu">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="content-txt">
-            <img src="src/assets/ocean-guard.png" alt="Logo da solução criada pela globalcode">
-            <p>
-                A <strong>OceanGuard</strong>, desenvolvida pela <strong>GlobalCode Dynamics</strong>, utiliza
-                tecnologia de ponta para enfrentar os desafios críticos que os oceanos enfrentam hoje. Nossa solução
-                inovadora visa monitorar e mitigar os impactos ambientais, promovendo uma gestão mais sustentável dos
-                recursos oceânicos.
-            </p>
-            <a href="src/pages/login.html">Acessar</a>
-        </div>
-        <div class="content-img">
-            <img src="src/assets/tecnologias.png" alt="Tecnologias usada no projeto">
-        </div>
+        <section class="contato">
+            <form>
+                <div class="titulo">
+                    <img src="../assets/logo-global-code-small-2.png" alt="Logo globalcode pequena" class="logo-titulo">
+                    <h1>Contato</h1>
+                </div>
+                <p class="texto-contato">Caso você queira ter acesso ao ocean guard mande a baixo a solicitação, coloque
+                    seus dados e o qual o tipo de
+                    usuário você deseja. Após a validação dos dado você receberá no email sua forma de aceso.</p>
+                <div class="box-input">
+                    <div class="input-single">
+                        <input type="text" id="nome" class="input" autocomplete="off" required>
+                        <label for="nome-box" class="label">Seu nome</label>
+                    </div>
+                    <div class="input-single">
+                        <input type="text" id="email" class="input" autocomplete="off" required>
+                        <label for="email-box" class="label">Seu e-mail</label>
+                    </div>
+                    <div class="input-single">
+                        <input type="text" id="telefone" class="input" autocomplete="off" required
+                            oninput="phoneMask(this)" maxlength="14">
+                        <label for="phone-box" class="label">Seu telefone</label>
+                    </div>
+                    <div class="select-single">
+                        <select name="tipo-user" id="tipo-user" required>
+                            <option disabled selected value="0">Selecione o seu tipo de usuario</option>
+                            <option value="CC">Comunidade Costeira</option>
+                            <option value="EM">Empresa Marítimas</option>
+                            <option value="GO">Governo/ONGs</option>
+                            <option value="PC">Pessoa Comum</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="btn-enviar" onclick="enviar(event)">Enviar</button>
+            </form>
+        </section>
+        <section class="bg-contato">
+            <img src="../assets/contact.svg" alt="Imagem ilustrativa para a pagina de contato">
+        </section>
     </main>
     <footer>
         <div class="contt-email">
@@ -78,7 +104,10 @@
             <a href="#" class="icon-media"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
-    <script src="src/js/menu.js"></script>
+
+    <!-- Scripts JS -->
+    <script src="../js/contato.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>

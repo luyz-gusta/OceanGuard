@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/assets/logo-global-code-small.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/logo-global-code-small.png" type="image/x-icon">
 
     <!-- Links CSS -->
-    <link rel="stylesheet" href="src/css/comum.css">
-    <link rel="stylesheet" href="src/css/home.css">
-    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="../css/comum.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/menu-dashboard.css">
 
     <!-- Imports -->
     <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
@@ -19,38 +19,50 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <title>Ocean Guard - Home</title>
+    <!-- Sweetalert -->
+    <script charset="UTF-8" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script charset="UTF-8" src="sweetalert2.all.min.js"></script>
+
+    <title>Ocean Guard - Dashboard</title>
 </head>
 
 <body>
     <header>
-        <img src="src/assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
-        <nav>
-            <div class="menuToggle" id="menuToggle">
-                <span class="menu-span unclicked"></span>
-                <span class="menu-span unclicked"></span>
-                <span class="menu-span unclicked"></span>
-            </div>
-            <ul class="menu" id="menu">
-                <li><a href="#" class="link-menu">Home</a></li>
-                <li><a href="src/pages/login.html" class="link-menu">Login</a></li>
-                <li><a href="src/pages/contato.html" class="link-menu">Contato</a></li>
-            </ul>
-        </nav>
+        <img src="../assets/logo-global-code.png" alt="Logo da empresa desenvolvedora da OceanGuard">
+        <div class="sair" id="sair">
+            <span>Sair</span>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </div>
     </header>
     <main>
-        <div class="content-txt">
-            <img src="src/assets/ocean-guard.png" alt="Logo da solução criada pela globalcode">
-            <p>
-                A <strong>OceanGuard</strong>, desenvolvida pela <strong>GlobalCode Dynamics</strong>, utiliza
-                tecnologia de ponta para enfrentar os desafios críticos que os oceanos enfrentam hoje. Nossa solução
-                inovadora visa monitorar e mitigar os impactos ambientais, promovendo uma gestão mais sustentável dos
-                recursos oceânicos.
-            </p>
-            <a href="src/pages/login.html">Acessar</a>
+        <div class="titulo">
+            <h1>Dashboard</h1>
+            <select name="tipo-user" id="tipoUser" required>
+                <option disabled selected value="0">Selecione o mar</option>
+            </select>
         </div>
-        <div class="content-img">
-            <img src="src/assets/tecnologias.png" alt="Tecnologias usada no projeto">
+        <div class="container-info">
+            <div class="info">
+                <div class="nome-valor">
+                    <h2>pH</h2>
+                    <img src="../assets/icon-ph.png" alt="Icone simbólico do pH da agua">
+                </div>
+                <p id="pH">0</p>
+            </div>
+            <div class="info">
+                <div class="nome-valor">
+                    <h2>Turbidez</h2>
+                    <img src="../assets/icon-turbidez.png" alt="Icone simbólico da turbidez da agua">
+                </div>
+                <p id="turbidez">0</p>
+            </div>
+            <div class="info">
+                <div class="nome-valor">
+                    <h2>Temperatura</h2>
+                    <img src="../assets/icon-temperatura.png" alt="Icone simbólico da temperatura da agua">
+                </div>
+                <p id="temperatura">0°C</p>
+            </div>
         </div>
     </main>
     <footer>
@@ -78,7 +90,10 @@
             <a href="#" class="icon-media"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
-    <script src="src/js/menu.js"></script>
+
+    <!-- Scripts JS -->
+    <script src="../js/dashboard.js"></script>
+
 </body>
 
 </html>

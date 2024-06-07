@@ -1,0 +1,160 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 120px;
+    height: 80vh;
+    width: 100vw;
+    background-color: var(--color1-dark-green);
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.titulo select {
+    width: 30%;
+    height: 48px;
+    border: 0px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 0px 8px;
+    color: var(--white-default);
+    background-color: var(--color2-light-green);
+}
+
+.container-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-items: center;
+    padding: 20px 0px;
+}
+
+.nome-valor {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nome-valor h2 {
+    font-size: 2.75rem;
+    font-weight: 500;
+    color: var(--white-default);
+}
+
+.nome-valor img {
+    width: 20%;
+    height: auto;
+}
+
+.info {
+    padding: 20px 24px 40px 40px;
+    width: 30%;
+    min-width: 450px;
+    height: 30vh;
+    border-radius: 14px;
+    animation: flyIn 2s ease-in-out forwards;
+    background-color: var(--color2-light-green);
+}
+
+.info p {
+    font-size: 6rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media (max-width: 1440px) {
+    main {
+        min-height: 80vh;
+        height: auto;
+    }
+    .container-info {
+        display: flex;
+        justify-content: center;
+        gap: 2rem 10%;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .titulo select {
+        min-width: 250px;
+    }
+
+    main {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 860px) {
+    .info {
+        padding: 24px;
+        min-width: 350px;
+        height: auto;
+    }
+
+    .info p {
+        font-size: 4rem;
+    }
+
+    .nome-valor h2 {
+        font-size: 2rem;
+    }
+
+    .nome-valor img {
+        width: 20%;
+        height: auto;
+    }
+}
+
+@media (max-width: 680px) {
+    .titulo {
+        align-items: center;
+    }
+    .titulo h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 440px) {
+    main {
+        padding: 60px 16px;
+    }
+    .info {
+        padding: 16px;
+        width: 90%;
+        height: auto;
+    }
+
+    .info p {
+        font-size: 2.5rem;
+    }
+
+    .nome-valor h2 {
+        font-size: 1.5rem;
+    }
+
+    .nome-valor img {
+        width: 20%;
+        height: auto;
+    }
+}
+
+@keyframes flyIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

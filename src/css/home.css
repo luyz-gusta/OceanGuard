@@ -1,0 +1,126 @@
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--color1-dark-green);
+    min-height: 80vh;
+}
+
+.content-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding-left: 120px;
+}
+
+.content-txt p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--white-default);
+}
+
+.content-txt a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 1rem;
+    width: 180px;
+    height: 60px;
+    border-radius: 4px;
+    background: linear-gradient(73deg, #00fefb -0.65%, #428e8d 99.23%);
+}
+
+.content-txt img {
+    width: 50%;
+    animation: jumping 1s infinite alternate;
+}
+
+.content-txt strong {
+    color: var(--color3-cyan);
+}
+
+.content-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-img img {
+    height: auto;
+    width: 60%;
+    animation: start 1s ease-in-out forwards;
+}
+
+@media (max-width: 920px) {
+    .content-txt {
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr auto;
+        padding: 12px 0px;
+        gap: 2rem;
+    }
+    .content-txt {
+        padding: 0px 60px;
+        align-items: center;
+    }
+
+    .content-txt img {
+        align-self: start;
+        width: 60%;
+    }
+
+    .content-img {
+        padding: 32px 0px;
+    }
+}
+
+@media (max-width: 640px) {
+    .content-txt img {
+        align-self: start;
+        width: 60%;
+    }
+
+    .content-img {
+        padding: 32px 0px;
+    }
+
+    .content-txt p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 540px) {
+    .content-txt img {
+        width: 100%;
+    }
+}
+
+@keyframes jumping {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes start {
+    from {
+        transform: translateX(-100vw) rotate(-360deg); /* Começa fora da tela à esquerda, girando */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotate(0deg); /* Termina na posição original, sem girar */
+        opacity: 1;
+    }
+}

@@ -1,0 +1,53 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--color2-light-green);
+}
+
+.sair {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.sair i {
+    font-size: 2.25rem;
+    color: #fff;
+}
+
+.sair span {
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media (max-width: 1080px) {
+    header img {
+        height: 60%;
+        width: auto;
+    }
+}
+
+@media (max-width: 960px) {
+    header {
+        padding: 0px 60px;
+    }
+}
+
+@media (max-width: 540px) {
+    header img {
+        height: 60%;
+        width: auto;
+    }
+}
+
+@media (max-width: 440px) {
+    header {
+        padding: 0px 24px;
+    }
+}
